@@ -128,20 +128,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="actions\MessageResult.cs" />
+    <Compile Include="AgilePoint\AgilePointActionHandler.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="ConstantList.cs" />
     <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="HTTPOperations.cs" />
     <Compile Include="linebot\ContentType.cs" />
     <Compile Include="linebot\LineBotHelper.cs" />
+    <Compile Include="linebot\LineSendPackage.cs" />
+    <Compile Include="linebot\LineTextContent.cs" />
     <Compile Include="MessageHandler.cs" />
     <Compile Include="Models\AgilePointTask.cs" />
-    <Compile Include="Models\Content.cs" />
-    <Compile Include="Models\ContentMetadata.cs" />
-    <Compile Include="Models\MsgContainer.cs" />
-    <Compile Include="Models\Result.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TaskConcierge.cs" />
   </ItemGroup>
@@ -154,6 +154,15 @@
     <Content Include="jsons\result.json" />
     <None Include="Properties\PublishProfiles\AskLine.pubxml" />
     <None Include="Properties\PublishProfiles\local IIS.pubxml" />
+    <Content Include="Web_production.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web_production.Debug.config">
+      <DependentUpon>Web_production.config</DependentUpon>
+    </Content>
+    <Content Include="Web_production.Release.config">
+      <DependentUpon>Web_production.config</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

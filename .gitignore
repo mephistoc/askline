@@ -243,3 +243,6 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/askline/Web_production.config
+/askline/Web_production.Release.config
+/askline/Web_production.Debug.config
