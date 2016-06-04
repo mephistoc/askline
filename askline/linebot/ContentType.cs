@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace askline.linebot {
+﻿namespace askline.linebot {
     public class ContentType {
         public const int TextMessage     = 1;
         public const int ImageMessage    = 2;

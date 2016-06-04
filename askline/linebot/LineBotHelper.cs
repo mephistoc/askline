@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.IO;
 using System.Text;
 using System.Net;
@@ -9,6 +6,9 @@ using log4net;
 using Newtonsoft.Json;
 
 namespace askline.linebot {
+    /// <summary>
+    /// Helper class for communicate with LINE Bot API.
+    /// </summary>
     public class LineBotHelper {
         private ILog Logger = null;
         private string BotBaseUri = "";
@@ -33,12 +33,18 @@ namespace askline.linebot {
             SenderMid = sender_mid;
         }
 
+        /// <summary>
+        /// Send message to a LINE user.
+        /// </summary>
+        /// <param name="receiver_mid"></param>
+        /// <param name="msg"></param>
         public void SendMsg(string receiver_mid, string msg) {
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(BotBaseUri + SendMsgRoute);
             request.ContentType = ContentType;
             request.Headers.Add(HEADER_CHANNEL_ID, ChannelId);
             request.Headers.Add(HEADER_CHANNEL_SEC, ChannelSecret);
             request.Headers.Add(HEADER_CHANNEL_MID, SenderMid);
+
             Logger.Info(String.Format("Bot Uri: {0}", request.RequestUri.ToString()));
 
             LineSendPackage sendMsg = new LineSendPackage {
@@ -60,7 +66,6 @@ namespace askline.linebot {
                 Logger.Info("Request prepared.");
 
                 var rep = request.GetResponse();
-                Logger.Info(rep.GetResponseStream().ToString());
             }
             catch (Exception ex) {
                 Logger.Error(String.Format("Error: {0}", ex.Message));

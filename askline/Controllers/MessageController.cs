@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 using System.Configuration;
 using Newtonsoft.Json.Linq;
-using Newtonsoft.Json;
 using log4net;
 
 namespace askline {
@@ -45,8 +40,6 @@ namespace askline {
 
             Logger.Info(Request.Headers.ToString());
             Logger.Info(msgBody);
-            //Logger.Info(String.Format("First from: {0}", (string)incomingPkg.SelectToken("result[0].from")));
-            //Logger.Info(String.Format("Content from: {0}", (string)incomingPkg.SelectToken("result[0].content.from")));
             Logger.Info(String.Format("From: {0}, Content is: {1}",
                 incomingSender,
                 incomingMsg));

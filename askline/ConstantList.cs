@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace askline {
+﻿namespace askline {
     public class ConstantList {
         public const string LineBotApiUri = "https://trialbot-api.line.me/v1/events";
         public const string EventType_Message           = "138311609000106303";

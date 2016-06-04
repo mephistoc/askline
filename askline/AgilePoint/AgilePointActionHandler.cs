@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using log4net;
 
 namespace askline {
@@ -30,6 +27,11 @@ namespace askline {
             Logger = logger;
         }
 
+        /// <summary>
+        /// Get task list from AgilePoint Cloud.
+        /// </summary>
+        /// <param name="user_id"></param>
+        /// <returns></returns>
         public string GetWorkListByUserID(string user_id) {
             string URI = ServerBaseUri + "/Workflow/GetWorkListByUserID";
 
@@ -51,7 +53,13 @@ namespace askline {
             }
         }
 
+        /// <summary>
+        /// Mapping LINE mid to AgilePoint user.
+        /// </summary>
+        /// <param name="mid"></param>
+        /// <returns></returns>
         public string GetUserNameByLineMID(string mid) {
+            // Put double "\" in ths string or you will get error when send the request.
             string rtnStr = "nxone\\\\VINCENT.CHU";
 
             return rtnStr;

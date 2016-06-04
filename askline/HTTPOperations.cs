@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
 using System.Net;
-using System.Text;
-using System.Security.Cryptography.X509Certificates;
-using System.Net.Security;
-using System.Xml.Linq;
-using System.Xml;
 using log4net;
 
 namespace askline {

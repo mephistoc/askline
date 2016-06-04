@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
-namespace askline.Models {
-    
+namespace askline {
+
+    /// <summary>
+    /// AgilePoint task model for future usage.
+    /// </summary>
     public class AgilePointTask {
 
         public AgilePointTask(string workitem_id,
